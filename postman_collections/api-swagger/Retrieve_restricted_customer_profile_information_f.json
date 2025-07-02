@@ -1,0 +1,32 @@
+[
+  {
+    "accountId": "rainbuildexc21@gmail.com",
+    "statusCode": 200,
+    "scenario": "Successful operation."
+  },
+  {
+    "accountId": "invalidEmail@domain.com",
+    "statusCode": 400,
+    "scenario": "If Authorization header is empty or If clientId is wrong"
+  },
+  {
+    "accountId": "expiredToken@domain.com",
+    "statusCode": 401,
+    "scenario": "If wrong access token is used or If AccessToken is expired"
+  },
+  {
+    "accountId": "wrongClientId@domain.com",
+    "statusCode": 403,
+    "scenario": "If clientId is correct but token was generated for different clientId"
+  },
+  {
+    "accountId": "notFoundToken@domain.com",
+    "statusCode": 404,
+    "scenario": "If AccessToken is not found"
+  },
+  {
+    "accountId": "internalError@domain.com",
+    "statusCode": 500,
+    "scenario": "If request failed due to an internal error"
+  }
+]
