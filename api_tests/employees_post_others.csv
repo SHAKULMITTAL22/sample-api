@@ -1,0 +1,11 @@
+^|^name^|^email^|^statusCode^|^scenario
+System Analyst^|^John Smith^|^john.smith@acme-corp.com^|^200^|^Scenario1
+Software Engineer^|^Jane Doe^|^jane.doe@acme-corp.com^|^201^|^Scenario2
+Data Scientist^|^Alice Johnson^|^alice.johnson@acme-corp.com^|^202^|^Scenario3
+Project Manager^|^Bob Brown^|^bob.brown@acme-corp.com^|^203^|^Scenario4
+Network Administrator^|^Charlie Davis^|^charlie.davis@acme-corp.com^|^204^|^Scenario5
+QA Tester^|^Eve Wilson^|^eve.wilson@acme-corp.com^|^205^|^Scenario6
+UX Designer^|^Frank Lee^|^frank.lee@acme-corp.com^|^206^|^Scenario7
+DevOps Engineer^|^Grace Moore^|^grace.moore@acme-corp.com^|^207^|^Scenario8
+IT Support Specialist^|^Harry Clark^|^harry.clark@acme-corp.com^|^208^|^Scenario9
+Cybersecurity Analyst^|^Ivy Rodriguez^|^ivy.rodriguez@acme-corp.com^|^209^|^Scenario10
