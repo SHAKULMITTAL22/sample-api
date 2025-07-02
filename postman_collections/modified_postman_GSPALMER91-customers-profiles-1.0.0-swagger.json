@@ -1,0 +1,542 @@
+{
+  "item": [
+    {
+      "name": "Retrieve restricted customer profile information for specific account",
+      "request": {
+        "name": "Retrieve restricted customer profile information for specific account",
+        "description": {
+          "content": "Returns the Citi customer's name, email address, mailing address and phone numbers. This should be used by data aggregators.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "accounts",
+            ":accountId",
+            "details"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "{{accountId}}",
+              "key": "accountId",
+              "description": "(Required) account ID"
+            }
+          ]
+        },
+        "header": [
+          {
+            "disabled": false,
+            "description": "(Required) 128 bit random UUID generated uniquely for every request",
+            "key": "uuid",
+            "value": "{{uuid}}"
+          },
+          {
+            "disabled": false,
+            "description": "(Required) Client ID generated during application registration.",
+            "key": "client_id",
+            "value": "{{client_id}}"
+          },
+          {
+            "disabled": false,
+            "description": "(Required) Two character ISO format Country Code",
+            "key": "countryCode",
+            "value": "{{countryCode}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "name": "Successful operation.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "accounts",
+                ":accountId",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{accountId}}",
+                  "key": "accountId",
+                  "description": "(Required) account ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The most recent authorization token. This will have the format Bearer + {space} + {accessToken}. Example: Bearer KGNsaWVudF9pZDpjbGllbnRfc2VjcmV0KQ==.",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 128 bit random UUID generated uniquely for every request",
+                "key": "uuid",
+                "value": "{{uuid}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Content-Types that are acceptable for the response",
+                "key": "Accept",
+                "value": "ullamco quis id"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Client ID generated during application registration.",
+                "key": "client_id",
+                "value": "{{client_id}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Two character ISO format Country Code",
+                "key": "countryCode",
+                "value": "{{countryCode}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"firstName\": \"Garrett\",\n  \"lastName\": \"Miera-Palmer\",\n  \"fullName\": \"Garrett Scott Miera-Palmer\",\n  \"middleName\": \"Scott\",\n  \"localName\": \"Garrett\",\n  \"title\": \"Mr\",\n  \"suffix\": \"culpa ut\",\n  \"maidenName\": \"Palmer\",\n  \"companyName\": \"Rainbow Builders & Excavation Inc.\",\n  \"emails\": [\n    {\n      \"emailAddress\": \"rainbuildexc21@gmail.com\",\n      \"preferenceType\": \"PRIMARY\"\n    },\n    {\n      \"emailAddress\": \"rainbuildexc21@gmail.com\",\n      \"preferenceType\": \"PRIMARY\"\n    }\n  ],\n  \"addressList\": [\n    {\n      \"countryCode\": \"US\",\n      \"postalCode\": \"72926-8869\",\n      \"addressId\": \"0001\",\n      \"addressLine1\": \"20131 Highway 71 South\",\n      \"addressLine2\": \"consectetur cupidatat ad\",\n      \"addressLine3\": \"ea id esse fugiat\",\n      \"addressType\": \"MAILING\",\n      \"city\": \"Boles\",\n      \"state\": \"AR\"\n    },\n    {\n      \"countryCode\": \"US\",\n      \"postalCode\": \"72926-8869\",\n      \"addressId\": \"0001\",\n      \"addressLine1\": \"20131 Highway 71 South\",\n      \"addressLine2\": \"dolor exercitation do\",\n      \"addressLine3\": \"consequat non voluptate deserunt\",\n      \"addressType\": \"MAILING\",\n      \"city\": \"Boles\",\n      \"state\": \"AR\"\n    }\n  ],\n  \"phones\": [\n    {\n      \"phoneType\": \"CELL\",\n      \"preferenceType\": \"PRIMARY\",\n      \"areaCode\": \"501\",\n      \"countryCallingCode\": \"1\",\n      \"exchangeNumber\": \"0716\",\n      \"extension\": \"123\",\n      \"fullPhoneNumber\": \"5013924474\",\n      \"localNumber\": \"in in\"\n    },\n    {\n      \"phoneType\": \"CELL\",\n      \"preferenceType\": \"PRIMARY\",\n      \"areaCode\": \"501\",\n      \"countryCallingCode\": \"1\",\n      \"exchangeNumber\": \"0716\",\n      \"extension\": \"123\",\n      \"fullPhoneNumber\": \"5013924474\",\n      \"localNumber\": \"reprehend\"\n    }\n  ]\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "name": "If Authorization header is empty or If clientId is wrong",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "accounts",
+                ":accountId",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{accountId}}",
+                  "key": "accountId",
+                  "description": "(Required) account ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The most recent authorization token. This will have the format Bearer + {space} + {accessToken}. Example: Bearer KGNsaWVudF9pZDpjbGllbnRfc2VjcmV0KQ==.",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 128 bit random UUID generated uniquely for every request",
+                "key": "uuid",
+                "value": "{{uuid}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Content-Types that are acceptable for the response",
+                "key": "Accept",
+                "value": "ullamco quis id"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Client ID generated during application registration.",
+                "key": "client_id",
+                "value": "{{client_id}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Two character ISO format Country Code",
+                "key": "countryCode",
+                "value": "{{countryCode}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"value\": \"<Error: Could not resolve allOf schema\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "name": "If wrong access token is used or If AccessToken is expired",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "accounts",
+                ":accountId",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{accountId}}",
+                  "key": "accountId",
+                  "description": "(Required) account ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The most recent authorization token. This will have the format Bearer + {space} + {accessToken}. Example: Bearer KGNsaWVudF9pZDpjbGllbnRfc2VjcmV0KQ==.",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 128 bit random UUID generated uniquely for every request",
+                "key": "uuid",
+                "value": "{{uuid}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Content-Types that are acceptable for the response",
+                "key": "Accept",
+                "value": "ullamco quis id"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Client ID generated during application registration.",
+                "key": "client_id",
+                "value": "{{client_id}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Two character ISO format Country Code",
+                "key": "countryCode",
+                "value": "{{countryCode}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"value\": \"<Error: Could not resolve allOf schema\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "name": "If clientId is correct but token was generated for different clientId",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "accounts",
+                ":accountId",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{accountId}}",
+                  "key": "accountId",
+                  "description": "(Required) account ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The most recent authorization token. This will have the format Bearer + {space} + {accessToken}. Example: Bearer KGNsaWVudF9pZDpjbGllbnRfc2VjcmV0KQ==.",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 128 bit random UUID generated uniquely for every request",
+                "key": "uuid",
+                "value": "{{uuid}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Content-Types that are acceptable for the response",
+                "key": "Accept",
+                "value": "ullamco quis id"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Client ID generated during application registration.",
+                "key": "client_id",
+                "value": "{{client_id}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Two character ISO format Country Code",
+                "key": "countryCode",
+                "value": "{{countryCode}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Forbidden",
+          "code": 403,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"value\": \"<Error: Could not resolve allOf schema\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "name": "If AccessToken is not found",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "accounts",
+                ":accountId",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{accountId}}",
+                  "key": "accountId",
+                  "description": "(Required) account ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The most recent authorization token. This will have the format Bearer + {space} + {accessToken}. Example: Bearer KGNsaWVudF9pZDpjbGllbnRfc2VjcmV0KQ==.",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 128 bit random UUID generated uniquely for every request",
+                "key": "uuid",
+                "value": "{{uuid}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Content-Types that are acceptable for the response",
+                "key": "Accept",
+                "value": "ullamco quis id"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Client ID generated during application registration.",
+                "key": "client_id",
+                "value": "{{client_id}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Two character ISO format Country Code",
+                "key": "countryCode",
+                "value": "{{countryCode}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"value\": \"<Error: Could not resolve allOf schema\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        },
+        {
+          "name": "If request failed due to an internal error",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "accounts",
+                ":accountId",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{accountId}}",
+                  "key": "accountId",
+                  "description": "(Required) account ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) The most recent authorization token. This will have the format Bearer + {space} + {accessToken}. Example: Bearer KGNsaWVudF9pZDpjbGllbnRfc2VjcmV0KQ==.",
+                "key": "Authorization",
+                "value": "{{Authorization}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) 128 bit random UUID generated uniquely for every request",
+                "key": "uuid",
+                "value": "{{uuid}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Content-Types that are acceptable for the response",
+                "key": "Accept",
+                "value": "ullamco quis id"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Client ID generated during application registration.",
+                "key": "client_id",
+                "value": "{{client_id}}"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Two character ISO format Country Code",
+                "key": "countryCode",
+                "value": "{{countryCode}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"value\": \"<Error: Could not resolve allOf schema\"\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test api-swagger using AI Type Azure Open AI and AI Model Inference\n\n\nTest generated for accounts/{accountId}/details for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n         console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\nif (pm.response.code == 200){\n    pm.test(\"Successful operation.\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `fullName` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`fullName`)){\n                if(pm.expect(ld.get(pm.response.json(), `fullName`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `fullName`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `firstName` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`firstName`)){\n                if(pm.expect(ld.get(pm.response.json(), `firstName`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `firstName`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `lastName` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`lastName`)){\n                if(pm.expect(ld.get(pm.response.json(), `lastName`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `lastName`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `middleName` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`middleName`)){\n                if(pm.expect(ld.get(pm.response.json(), `middleName`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `middleName`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `localName` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`localName`)){\n                if(pm.expect(ld.get(pm.response.json(), `localName`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `localName`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `title` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`title`)){\n                if(pm.expect(ld.get(pm.response.json(), `title`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `title`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `suffix` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`suffix`)){\n                if(pm.expect(ld.get(pm.response.json(), `suffix`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `suffix`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `maidenName` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`maidenName`)){\n                if(pm.expect(ld.get(pm.response.json(), `maidenName`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `maidenName`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `companyName` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`companyName`)){\n                if(pm.expect(ld.get(pm.response.json(), `companyName`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `companyName`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `emails` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`emails`)){\n                if(pm.expect(ld.get(pm.response.json(), `emails`)).to.exist){\n                  pm.expect(Array.isArray(ld.get(pm.response.json(), `emails`))).to.equal(true);\n                }\n\n            }\n\n        })\n\n        pm.test(`Each object in the emails field has all the required fields`,function(){\n            pm.expect(pm.response.json()).to.have.nested.property(`emails`);\n            let emailsArray = ld.get(pm.response.json(), `emails`, \"\");\n            for (let emails_it = 0; emails_it < emailsArray.length; emails_it++) {\n                let iterator = emails_it;\n                \t\n        pm.test(`${iterator} element of array 'emails[${emails_it}].emailAddress' has 'emailAddress' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `emails[${emails_it}].emailAddress`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`emails[${emails_it}].emailAddress`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'emails[${emails_it}].preferenceType' has 'preferenceType' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `emails[${emails_it}].preferenceType`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`emails[${emails_it}].preferenceType`, null)).to.equal(\"string\");\n            }\n        })\n\n \n        pm.test(`emails[${emails_it}].preferenceType to be one of enum`, function(){ \n            pm.expect(ld.get(responseData, `emails[${emails_it}].preferenceType`, \"\")).to.include.oneOf([\"PRIMARY\",\"SECONDARY\"]);\n        })\n\n            }\n\n        })\n\n        pm.test('Response has the `addressList` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`addressList`)){\n                if(pm.expect(ld.get(pm.response.json(), `addressList`)).to.exist){\n                  pm.expect(Array.isArray(ld.get(pm.response.json(), `addressList`))).to.equal(true);\n                }\n\n            }\n\n        })\n\n        pm.test(`Each object in the addressList field has all the required fields`,function(){\n            pm.expect(pm.response.json()).to.have.nested.property(`addressList`);\n            let addressListArray = ld.get(pm.response.json(), `addressList`, \"\");\n            for (let addressList_it = 0; addressList_it < addressListArray.length; addressList_it++) {\n                let iterator = addressList_it;\n                \t\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].addressId' has 'addressId' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].addressId`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].addressId`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].addressLine1' has 'addressLine1' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].addressLine1`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].addressLine1`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].addressLine2' has 'addressLine2' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].addressLine2`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].addressLine2`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].addressLine3' has 'addressLine3' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].addressLine3`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].addressLine3`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].addressType' has 'addressType' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].addressType`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].addressType`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].city' has 'city' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].city`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].city`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].countryCode' has 'countryCode' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].countryCode`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].countryCode`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].postalCode' has 'postalCode' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].postalCode`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].postalCode`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'addressList[${addressList_it}].state' has 'state' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `addressList[${addressList_it}].state`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`addressList[${addressList_it}].state`, null)).to.equal(\"string\");\n            }\n        })\n\n\n            }\n\n        })\n\n        pm.test('Response has the `phones` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`phones`)){\n                if(pm.expect(ld.get(pm.response.json(), `phones`)).to.exist){\n                  pm.expect(Array.isArray(ld.get(pm.response.json(), `phones`))).to.equal(true);\n                }\n\n            }\n\n        })\n\n        pm.test(`Each object in the phones field has all the required fields`,function(){\n            pm.expect(pm.response.json()).to.have.nested.property(`phones`);\n            let phonesArray = ld.get(pm.response.json(), `phones`, \"\");\n            for (let phones_it = 0; phones_it < phonesArray.length; phones_it++) {\n                let iterator = phones_it;\n                \t\n        pm.test(`${iterator} element of array 'phones[${phones_it}].areaCode' has 'areaCode' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].areaCode`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].areaCode`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'phones[${phones_it}].countryCallingCode' has 'countryCallingCode' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].countryCallingCode`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].countryCallingCode`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'phones[${phones_it}].exchangeNumber' has 'exchangeNumber' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].exchangeNumber`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].exchangeNumber`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'phones[${phones_it}].extension' has 'extension' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].extension`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].extension`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'phones[${phones_it}].fullPhoneNumber' has 'fullPhoneNumber' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].fullPhoneNumber`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].fullPhoneNumber`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'phones[${phones_it}].localNumber' has 'localNumber' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].localNumber`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].localNumber`, null)).to.equal(\"string\");\n            }\n        })\n\n\n        pm.test(`${iterator} element of array 'phones[${phones_it}].phoneType' has 'phoneType' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].phoneType`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].phoneType`, null)).to.equal(\"string\");\n            }\n        })\n\n \n        pm.test(`phones[${phones_it}].phoneType to be one of enum`, function(){ \n            pm.expect(ld.get(responseData, `phones[${phones_it}].phoneType`, \"\")).to.include.oneOf([\"HOME\",\"BUSINESS\",\"CELL\",\"MOBILE\"]);\n        })\n\n        pm.test(`${iterator} element of array 'phones[${phones_it}].preferenceType' has 'preferenceType' as 'string'`,function(){ \n            if(pm.expect(ld.get(pm.response.json(), `phones[${phones_it}].preferenceType`, null)).to.exist){\n              pm.expect(typeof ld.get(pm.response.json(),`phones[${phones_it}].preferenceType`, null)).to.equal(\"string\");\n            }\n        })\n\n \n        pm.test(`phones[${phones_it}].preferenceType to be one of enum`, function(){ \n            pm.expect(ld.get(responseData, `phones[${phones_it}].preferenceType`, \"\")).to.include.oneOf([\"PRIMARY\",\"SECONDARY\"]);\n        })\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 400){\n    pm.test(\"If Authorization header is empty or If clientId is wrong\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"If wrong access token is used or If AccessToken is expired\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 403){\n    pm.test(\"If clientId is correct but token was generated for different clientId\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Forbidden\");\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 404){\n    pm.test(\"If AccessToken is not found\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Not Found\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"If request failed due to an internal error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error`)){\n                if(pm.expect(ld.get(pm.response.json(), `error`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `error_description` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`error_description`)){\n                if(pm.expect(ld.get(pm.response.json(), `error_description`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `error_description`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `type` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`type`)){\n                if(pm.expect(ld.get(pm.response.json(), `type`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `type`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(pm.response.json(), `code`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `code`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/api/custmgmt/profiles/v1",
+      "key": "baseUrl"
+    },
+    {
+      "type": "number",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "info": {
+    "_postman_id": "a388c61f-ee79-4b07-9c9a-a25fc155ff56",
+    "name": "Customers Profiles",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Customers API can be used to view and update basic customer profile information like name, mailing address, email address, and phone numbers.",
+      "type": "text/plain"
+    }
+  }
+}
