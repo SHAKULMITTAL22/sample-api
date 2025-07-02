@@ -1,0 +1,47 @@
+[
+  {
+    "brand_name": "Apple",
+    "product_name": "iPhone 13",
+    "upc": "885909950897",
+    "model_number": 1001,
+    "confidence_model": "Model A",
+    "statusCode": 200,
+    "scenario": "Product found as a result of search criteria."
+  },
+  {
+    "brand_name": "Samsung",
+    "product_name": "Galaxy S21",
+    "upc": "036000291452",
+    "model_number": 1002,
+    "confidence_model": "Model B",
+    "statusCode": 200,
+    "scenario": "Product found as a result of search criteria."
+  },
+  {
+    "brand_name": "Google",
+    "product_name": "Pixel 6",
+    "upc": "014100033639",
+    "model_number": 1003,
+    "confidence_model": "Model C",
+    "statusCode": 200,
+    "scenario": "Product found as a result of search criteria."
+  },
+  {
+    "brand_name": "OnePlus",
+    "product_name": "9 Pro",
+    "upc": "617226400024",
+    "model_number": 1004,
+    "confidence_model": "Model D",
+    "statusCode": 200,
+    "scenario": "Product found as a result of search criteria."
+  },
+  {
+    "brand_name": "Xiaomi",
+    "product_name": "Mi 11",
+    "upc": "880133611480",
+    "model_number": 1005,
+    "confidence_model": "Model E",
+    "statusCode": 200,
+    "scenario": "Product found as a result of search criteria."
+  }
+]
