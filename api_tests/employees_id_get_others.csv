@@ -1,0 +1,11 @@
+^|^name^|^age^|^email^|^phone^|^address^|^salary^|^department^|^hire_date^|^job_title
+123e4567-e89b-12d3-a456-426614174000^|^John Doe^|^30^|^john.doe@example.com^|^555-1234^|^123 Main St^|^60000^|^Engineering^|^2022-01-15^|^Software Engineer
+234e5678-e90a-13d4-b567-537725285111^|^Jane Smith^|^28^|^jane.smith@example.com^|^555-5678^|^456 Oak Ave^|^70000^|^Marketing^|^2021-06-20^|^Marketing Specialist
+345e6789-f01b-14d5-c678-648836396222^|^Alice Johnson^|^35^|^alice.johnson@example.com^|^555-9012^|^789 Pine Rd^|^80000^|^Sales^|^2020-11-10^|^Sales Manager
+456e7890-g12c-15d6-d789-759947407333^|^Bob Brown^|^40^|^bob.brown@example.com^|^555-3456^|^321 Cedar Blvd^|^90000^|^HR^|^2019-03-05^|^HR Coordinator
+567e8901-h23d-16d7-e890-860058518444^|^Charlie Davis^|^45^|^charlie.davis@example.com^|^555-7890^|^654 Elm St^|^100000^|^Finance^|^2018-08-12^|^Financial Analyst
+678e9012-i34e-17d8-f901-971169629555^|^Eve Wilson^|^25^|^eve.wilson@example.com^|^555-2345^|^987 Maple Ave^|^55000^|^IT^|^2023-04-25^|^IT Support Specialist
+789e0123-j45f-18d9-g012-082280730666^|^Frank Lee^|^32^|^frank.lee@example.com^|^555-6789^|^258 Birch Rd^|^75000^|^Engineering^|^2022-09-18^|^Senior Software Engineer
+890e1234-k56g-19da-h123-193391841777^|^Grace White^|^29^|^grace.white@example.com^|^555-0123^|^589 Walnut Blvd^|^65000^|^Marketing^|^2021-12-03^|^Marketing Manager
+901e2345-l67h-20db-i234-204402952888^|^Hank Green^|^42^|^hank.green@example.com^|^555-4567^|^852 Cherry St^|^85000^|^Sales^|^2020-05-15^|^Senior Sales Manager
+012e3456-m78i-21dc-j345-315514063999^|^Ivy Black^|^38^|^ivy.black@example.com^|^555-8901^|^369 Pineapple Ave^|^95000^|^HR^|^2019-10-28^|^HR Manager

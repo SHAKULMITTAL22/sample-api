@@ -1,0 +1,11 @@
+name^|^email^|^age^|^location^|^phone^|^gender^|^occupation^|^income
+John Doe^|^john.doe@example.com^|^30^|^New York^|^555-1234^|^Male^|^Engineer^|^75000
+Jane Smith^|^jane.smith@example.com^|^25^|^Los Angeles^|^555-5678^|^Female^|^Designer^|^65000
+Alice Johnson^|^alice.johnson@example.com^|^45^|^Chicago^|^555-9101^|^Female^|^Doctor^|^120000
+Bob Brown^|^bob.brown@example.com^|^35^|^Houston^|^555-1121^|^Male^|^Teacher^|^50000
+Charlie Davis^|^charlie.davis@example.com^|^28^|^Phoenix^|^555-3141^|^Male^|^Artist^|^40000
+Eve Wilson^|^eve.wilson@example.com^|^32^|^Philadelphia^|^555-5161^|^Female^|^Lawyer^|^90000
+Frank Lee^|^frank.lee@example.com^|^40^|^San Antonio^|^555-7181^|^Male^|^Chef^|^55000
+Grace Moore^|^grace.moore@example.com^|^27^|^San Diego^|^555-9191^|^Female^|^Nurse^|^60000
+Hank Taylor^|^hank.taylor@example.com^|^38^|^Dallas^|^555-1202^|^Male^|^Mechanic^|^65000
+Ivy Clark^|^ivy.clark@example.com^|^29^|^San Jose^|^555-3213^|^Female^|^Writer^|^55000
