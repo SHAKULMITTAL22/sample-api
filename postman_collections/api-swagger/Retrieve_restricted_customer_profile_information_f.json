@@ -1,0 +1,32 @@
+[
+  {
+    "accountId": "123456789",
+    "statusCode": 200,
+    "scenario": "Successful operation."
+  },
+  {
+    "accountId": "987654321",
+    "statusCode": 400,
+    "scenario": "If Authorization header is empty or If clientId is wrong"
+  },
+  {
+    "accountId": "112233445",
+    "statusCode": 401,
+    "scenario": "If wrong access token is used or If AccessToken is expired"
+  },
+  {
+    "accountId": "556677889",
+    "statusCode": 403,
+    "scenario": "If clientId is correct but token was generated for different clientId"
+  },
+  {
+    "accountId": "998877665",
+    "statusCode": 404,
+    "scenario": "If AccessToken is not found"
+  },
+  {
+    "accountId": "112233445",
+    "statusCode": 500,
+    "scenario": "If request failed due to an internal error"
+  }
+]
