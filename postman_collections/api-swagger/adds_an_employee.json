@@ -1,0 +1,42 @@
+[
+  {
+    "jobTitle_*string": "Software Engineer",
+    "name_*string": "Alice Johnson",
+    "email_*string": "alice.johnson@acme-corp.com",
+    "id_*uuid": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "statusCode": 201,
+    "scenario": "employee created"
+  },
+  {
+    "jobTitle_*string": "Product Manager",
+    "name_*string": "Bob Brown",
+    "email_*string": "bob.brown@acme-corp.com",
+    "id_*uuid": "d290f1ee-6c54-4b01-90e6-d701748f0852",
+    "statusCode": 201,
+    "scenario": "employee created"
+  },
+  {
+    "jobTitle_*string": "Data Scientist",
+    "name_*string": "Charlie Davis",
+    "email_*string": "charlie.davis@acme-corp.com",
+    "id_*uuid": "d290f1ee-6c54-4b01-90e6-d701748f0853",
+    "statusCode": 201,
+    "scenario": "employee created"
+  },
+  {
+    "jobTitle_*string": "InvalidJobTitle",
+    "name_*string": "InvalidName",
+    "email_*string": "invalid.email@acme-corp.com",
+    "id_*uuid": "invalid-uuid",
+    "statusCode": 400,
+    "scenario": "invalid input, object invalid"
+  },
+  {
+    "jobTitle_*string": "System Analyst",
+    "name_*string": "John Smith",
+    "email_*string": "john.smith@acme-corp.com",
+    "id_*uuid": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "statusCode": 409,
+    "scenario": "an existing employee already exists"
+  }
+]

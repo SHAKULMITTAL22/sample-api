@@ -1,0 +1,27 @@
+[
+  {
+    "searchString": "Engineer",
+    "statusCode": 200,
+    "scenario": "Search results matching the filter criteria"
+  },
+  {
+    "searchString": "Developer",
+    "statusCode": 200,
+    "scenario": "Search results matching the filter criteria"
+  },
+  {
+    "searchString": "Manager",
+    "statusCode": 200,
+    "scenario": "Search results matching the filter criteria"
+  },
+  {
+    "searchString": "12345",
+    "statusCode": 400,
+    "scenario": "Bad input"
+  },
+  {
+    "searchString": "!@#$%",
+    "statusCode": 400,
+    "scenario": "Bad input"
+  }
+]
