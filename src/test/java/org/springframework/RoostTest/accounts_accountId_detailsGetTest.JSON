@@ -1,0 +1,47 @@
+[
+  {
+    "test_case_id": 1,
+    "description": "Test if the function returns the correct sum of two positive integers.",
+    "input": {
+      "a": 5,
+      "b": 3
+    },
+    "expected_output": 8
+  },
+  {
+    "test_case_id": 2,
+    "description": "Test if the function handles negative integers correctly.",
+    "input": {
+      "a": -5,
+      "b": 3
+    },
+    "expected_output": -2
+  },
+  {
+    "test_case_id": 3,
+    "description": "Test if the function returns zero when both inputs are zero.",
+    "input": {
+      "a": 0,
+      "b": 0
+    },
+    "expected_output": 0
+  },
+  {
+    "test_case_id": 4,
+    "description": "Test if the function handles large integers correctly.",
+    "input": {
+      "a": 1000000,
+      "b": 2000000
+    },
+    "expected_output": 3000000
+  },
+  {
+    "test_case_id": 5,
+    "description": "Test if the function handles floating-point numbers correctly.",
+    "input": {
+      "a": 3.5,
+      "b": 2.5
+    },
+    "expected_output": 6.0
+  }
+]
