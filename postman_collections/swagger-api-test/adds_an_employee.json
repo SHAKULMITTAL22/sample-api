@@ -1,0 +1,42 @@
+[
+  {
+    "jobTitle_string": "System Analyst",
+    "name_string": "John Smith",
+    "email_string": "john.smith@acme-corp.com",
+    "id_uuid": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "statusCode": 201,
+    "scenario": "employee created"
+  },
+  {
+    "jobTitle_string": "Developer",
+    "name_string": "Jane Doe",
+    "email_string": "jane.doe@acme-corp.com",
+    "id_uuid": "e1a9f088-8c39-44c2-9932-1be52a133875",
+    "statusCode": 201,
+    "scenario": "employee created"
+  },
+  {
+    "jobTitle_string": "Inv@lid_Job_Title",
+    "name_string": "Invalid-Name123",
+    "email_string": "invalid_email.com",
+    "id_uuid": "invalid-uuid-value",
+    "statusCode": 400,
+    "scenario": "invalid input, object invalid"
+  },
+  {
+    "jobTitle_string": "HR Manager",
+    "name_string": "Alice Brown",
+    "email_string": "alice.brown@acme-corp.com",
+    "id_uuid": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "statusCode": 409,
+    "scenario": "an existing employee already exists"
+  },
+  {
+    "jobTitle_string": "QA Tester",
+    "name_string": "Bob Taylor",
+    "email_string": "bob.taylor@company.co",
+    "id_uuid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "statusCode": 201,
+    "scenario": "employee created"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "id": "919c1b5e-e3a1-4c45-a842-cf9d87819098",
+    "statusCode": 200,
+    "scenario": "Successful operation"
+  },
+  {
+    "id": "invalid-id",
+    "statusCode": 404,
+    "scenario": "Not found"
+  },
+  {
+    "id": "12345-invalid",
+    "statusCode": 404,
+    "scenario": "Not found"
+  },
+  {
+    "id": "xxyyz-invalid-uuid",
+    "statusCode": 404,
+    "scenario": "Not found"
+  }
+]
